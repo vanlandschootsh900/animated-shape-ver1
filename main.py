@@ -18,6 +18,12 @@ def init_game ():
 def draw_rect(screen,x,y,width,height):
     pygame.draw.rect(screen,config.PURPLE,(x,y, width, height))
 
+
+def draw_text(screen, text, font, font_color, position, anti_aliased=True, italic=False, bold=False):
+     img = font.render(text, True, font_color)
+     screen.blit(img, position,)
+
+
 def handle_events ():
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -36,30 +42,23 @@ def main():
     y=300
     new_y=5
     new_x=5
+    airal = pygame.font.SysFont('airal',55)
     running = True
     while running:
         running = handle_events()
-        screen.fill(config.WHITE) # Use color from config
+        screen.fill(config.BLACK) # Use color from config
         
         # Add code to draw stuff (for example) below this comment
-        draw_rect(screen,x,y,50,60)
 
-        
+        draw_text(screen,'Shay VanLandschoot',airal,config.WHITE,(300,300))
+
+        draw_rect(screen,x,y,50,60)
         x += new_x
         y += new_y
-
         if x >750 or x <0:
             new_x = new_x*-1
         if y >540 or y<0:
             new_y = new_y*-1
-
-
-
-
-        
-
-
-
 
 
         pygame.display.flip()

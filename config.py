@@ -1,3 +1,4 @@
+
 # Pygame Configuration Module
 
 # Color constants (RGB)
@@ -8,6 +9,11 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 PURPLE = (255, 0 , 255)
 GRAY = (128,128,128)
+
+#Fonts
+
+#AIRAL = pygame.font.SysFont('airal',55)
+
 # Game window dimensions
 WINDOW_WIDTH = 800
 WINDOW_HEIGHT = 600
