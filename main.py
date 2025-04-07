@@ -15,6 +15,9 @@ def init_game ():
     pygame.display.set_caption(config.TITLE)
     return screen
 
+def draw_rect(screen,x,y,width,height):
+    pygame.draw.rect(screen,config.PURPLE,(x,y, width, height))
+
 def handle_events ():
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -29,18 +32,31 @@ def main():
     screen = init_game()
     clock = pygame.time.Clock()
 
-
-    
+    x=400
+    y=300
+    new_y=5
+    new_x=5
     running = True
     while running:
         running = handle_events()
         screen.fill(config.WHITE) # Use color from config
         
         # Add code to draw stuff (for example) below this comment
+        draw_rect(screen,x,y,50,60)
+
+        
+        x += new_x
+        y += new_y
+
+        if x >750 or x <0:
+            new_x = new_x*-1
+        if y >540 or y<0:
+            new_y = new_y*-1
 
 
 
 
+        
 
 
 

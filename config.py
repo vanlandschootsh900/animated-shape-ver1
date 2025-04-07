@@ -46,3 +46,8 @@ TITLE ='pygame template'
 #def draw_text(screen, text, font, font_color, position, anti_aliased=True, italic=False, bold=False):
     #img = font.render(text, True, font_color)
     #screen.blit(img, position,)
+
+
+
+# def draw_rect(screen,x,y,width,height):
+#     pygame.draw.rect(screen,config.PURPLE,(x,y, width, height))
