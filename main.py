@@ -55,11 +55,11 @@ def main():
         draw_rect(screen,x,y,50,60)
         x += new_x
         y += new_y
-        if x >750 or x <0:
+        if x >749 or x <0:
             new_x = new_x*-1
-        if y >540 or y<0:
+        if y >539 or y<0:
             new_y = new_y*-1
-
+        
 
         pygame.display.flip()
         # Limit the frame rate to the specified frames per second (FPS)
